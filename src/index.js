@@ -7,6 +7,8 @@ import useBoxRenderer from './useBoxRenderer'
 
 import styles from './styles.module.css'
 
+import * as serviceWorker from './serviceWorker';
+
 const MODEL_PATH = process.env.PUBLIC_URL + '/model_web'
 
 const App = () => {
@@ -41,3 +43,4 @@ const App = () => {
 
 const rootElement = document.getElementById('root')
 ReactDOM.render(<App />, rootElement)
+serviceWorker.register();
